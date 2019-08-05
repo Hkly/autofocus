@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_02_231443) do
+ActiveRecord::Schema.define(version: 2019_08_05_230739) do
 
   create_table "items", force: :cascade do |t|
     t.integer "list_id"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2019_08_02_231443) do
     t.boolean "completed", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "date_completed"
     t.index ["list_id"], name: "index_items_on_list_id"
   end
 

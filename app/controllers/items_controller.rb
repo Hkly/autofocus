@@ -12,7 +12,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name, :completed)
+    params.require(:item).permit(:name, :completed, :date_completed)
   end
 
   def item

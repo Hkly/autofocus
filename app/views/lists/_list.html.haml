@@ -4,4 +4,4 @@
 - if @list.items.completed.any?
   %h3 Completed Items
   %ul
-    = render @list.items.completed
+    = render @list.items.completed.ordered_by_date_completed

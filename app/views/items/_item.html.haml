@@ -1,4 +1,5 @@
 %li
   = item.name
   - unless item.completed?
-    = button_to "done", item_path(item), method: :patch, params: {"item[completed]": true}
+    = button_to "done", item_path(item), method: :patch,
+      params: {"item[completed]": true, "item[date_completed]": Time.now}
