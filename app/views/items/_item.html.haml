@@ -1,1 +1,4 @@
-%li= item.name
+%li
+  = item.name
+  - unless item.completed?
+    = button_to "done", item_path(item), method: :patch, params: {"item[completed]": true}

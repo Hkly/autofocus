@@ -1,2 +1,7 @@
 %ul
-  = render @list.items
+  = render @list.items.incomplete
+
+- if @list.items.completed.any?
+  %h3 Completed Items
+  %ul
+    = render @list.items.completed
