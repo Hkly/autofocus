@@ -1,5 +1,6 @@
 %li
   = item.name
   - unless item.completed?
+    = button_to "focus", focus_item_path(item), method: :post
     = button_to "done", item_path(item), method: :patch,
       params: {"item[completed]": true, "item[date_completed]": Time.now}

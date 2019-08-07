@@ -1,4 +1,8 @@
-%h1 A list!
+%h1 AutoFocus
+- if @list.focused_item.present?
+  %h2
+    = "Current Focus: #{@list.focused_item.name}"
+    = button_to "Unfocus", unfocus_item_path(@list.focused_item), method: :delete
 
 = render partial: 'items/form'
 = render @list
