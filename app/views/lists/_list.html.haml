@@ -2,6 +2,8 @@
   = render @list.items.incomplete.unfocused
 
 - if @list.items.completed.any?
-  %h3 Completed Items
+  %h3 Recently Completed Items
   %ul
-    = render @list.items.completed.ordered_by_date_completed
+    = render @list.items.recently_completed
+
+  %h3= "Total Completed: #{@list.items.completed.count}"
