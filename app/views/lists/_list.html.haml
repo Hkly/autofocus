@@ -1,5 +1,5 @@
 %ul
-  = render @list.items.incomplete
+  = render @list.items.incomplete.unfocused
 
 - if @list.items.completed.any?
   %h3 Completed Items
