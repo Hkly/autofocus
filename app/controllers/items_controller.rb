@@ -1,6 +1,11 @@
 class ItemsController < ApplicationController
   def create
     item = current_user.list.items.create(item_params)
+
+    if !item.persisted?
+      flash[:alert] = item.errors.messages
+    end
+
     redirect_to root_path
   end
 

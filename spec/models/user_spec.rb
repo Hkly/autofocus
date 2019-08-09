@@ -5,9 +5,9 @@ RSpec.describe User do
     let(:user) { create :user }
 
     it 'creates one when no list' do
-      expect(List.where(user_id: user.id)).to have(0).records
-      expect{ user.list }.to change{ List.count }.by(1)
-      expect(List.where(user_id: user.id)).to have(1).records
+      expect{ user.list }.to(
+        change{ List.where(user_id: user.id).count }.by(1)
+      )
     end
 
     it 'returns existing list' do

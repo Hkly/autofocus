@@ -7,6 +7,6 @@ class User < ApplicationRecord
   has_one :list, dependent: :destroy
 
   def list
-    super || List.create(user: self)
+    super || create_list
   end
 end

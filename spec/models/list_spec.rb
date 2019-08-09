@@ -13,11 +13,10 @@ RSpec.describe List do
 
   describe '#unfocus' do
     it 'clears the focused item' do
-      list.focus_on(list.items.first)
-      expect(list.focused_item).to_not be nil
+      list.focused_item = list.items.first
       list.unfocus
-      list.reload
-      
+      list.reload_focused_item
+
       expect(list.focused_item).to be nil
     end
   end
