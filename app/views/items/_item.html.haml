@@ -2,5 +2,5 @@
   = item.name
   - unless item.completed?
     = button_to "focus", focus_item_path(item), method: :post
-    = button_for_completed item
+    = button_to_complete item
     = button_to "delete", item_path(item), method: :delete
