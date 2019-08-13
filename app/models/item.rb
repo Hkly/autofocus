@@ -11,7 +11,12 @@ class Item < ApplicationRecord
   scope :unfocused, -> { left_outer_joins(:focus).where("focuses.id": nil) }
   scope :recently_completed, -> { completed.ordered_by_date_completed.first(5) }
 
+  before_update :set_completed_date, if: :completed?
   after_update :unfocus, if: :focused_completed
+
+  def set_completed_date
+    self.date_completed = DateTime.now
+  end
 
   def focused_completed
     completed? && focused?
