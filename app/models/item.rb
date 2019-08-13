@@ -7,8 +7,9 @@ class Item < ApplicationRecord
 
   scope :completed, -> { where(completed: true) }
   scope :incomplete, -> { where(completed: false) }
-  scope :ordered_by_date_completed, -> { order(date_completed: :desc) }
   scope :unfocused, -> { left_outer_joins(:focus).where("focuses.id": nil) }
+  scope :order_by_last_focused, -> { order(last_focused_date: :asc)}
+  scope :ordered_by_date_completed, -> { order(date_completed: :desc) }
   scope :recently_completed, -> { completed.ordered_by_date_completed.first(5) }
 
   before_update :set_completed_date, if: :completed?

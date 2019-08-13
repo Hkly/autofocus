@@ -1,5 +1,5 @@
 %ul
-  = render @list.items.incomplete.unfocused
+  = render @list.items.incomplete.unfocused.order_by_last_focused
 
 - if @list.items.completed.any?
   %h3 Recently Completed Items

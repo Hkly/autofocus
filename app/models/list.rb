@@ -9,6 +9,7 @@ class List < ApplicationRecord
   def focus_on(item)
     unless focused_item == item
       self.focused_item = item
+      item.update_attribute(:last_focused_date, DateTime.now)
     end
   end
 

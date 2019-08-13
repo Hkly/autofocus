@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_06_220803) do
+ActiveRecord::Schema.define(version: 2019_08_09_234616) do
 
   create_table "focuses", force: :cascade do |t|
     t.integer "list_id"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2019_08_06_220803) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "date_completed"
+    t.datetime "last_focused_date"
     t.index ["list_id"], name: "index_items_on_list_id"
   end
 
