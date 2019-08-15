@@ -6,4 +6,8 @@
     = button_to_complete @list.focused_item
 
 = render partial: 'items/form'
-= render @list
+
+= render partial: 'lists/active_items'
+
+- if @list.items.completed.any?
+  = render partial: 'lists/recently_completed_items'

@@ -1,0 +1,5 @@
+%h3 Recently Completed Items
+%ul
+  = render @list.items.recently_completed
+
+%h3= "Total Completed: #{@list.items.completed.count}"
