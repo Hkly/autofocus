@@ -1,6 +1,6 @@
 %li
   = item.name
   - unless item.completed?
-    = button_to "focus", focus_item_path(item), method: :post
-    = button_to_complete item
-    = button_to "delete", item_path(item), method: :delete
+    = link_to_focus item
+    = link_to_complete item
+    = link_to_delete item

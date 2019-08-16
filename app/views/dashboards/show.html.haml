@@ -2,8 +2,8 @@
 - if @list.focused_item.present?
   %h2
     = "Current Focus: #{@list.focused_item.name}"
-    = button_to "Unfocus", unfocus_item_path(@list.focused_item), method: :delete
-    = button_to_complete @list.focused_item
+    = link_to_unfocus @list.focused_item
+    = link_to_complete @list.focused_item
 
 = render partial: 'items/form'
 
