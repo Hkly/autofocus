@@ -1,0 +1,29 @@
+.dashboard {
+  margin-top: 50px;
+}
+
+.new-item-form {
+  padding: 10px 0;
+  input[type="text"] {
+    width: 300px;
+    font-size: 20px;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    outline: none;
+    line-height: 35px;
+    font-family: serif;
+    padding: 0 7px;
+    vertical-align: top;
+  }
+
+  button {
+    @include icon-btn;
+    border: none;
+    font-size: 30px;
+  }
+}
+
+.current-focus {
+  font-size: 30px;
+  margin: 35px auto;
+}

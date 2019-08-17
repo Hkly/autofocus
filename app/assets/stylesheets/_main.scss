@@ -1,0 +1,21 @@
+body {
+  font-family: "Arial Black", sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  @include icon-btn;
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.greyed-out {
+  color: $grey;
+}

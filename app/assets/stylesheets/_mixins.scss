@@ -1,0 +1,10 @@
+@mixin icon-btn {
+  color: $teal;
+  padding: 0 5px;
+  border-radius: 5px;
+  &:hover {
+    color: white;
+    background: $teal;
+    cursor: pointer;
+  }
+}

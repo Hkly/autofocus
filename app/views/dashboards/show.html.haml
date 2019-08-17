@@ -1,13 +1,14 @@
-%h1 AutoFocus
-- if @list.focused_item.present?
-  %h2
-    = "Current Focus: #{@list.focused_item.name}"
-    = link_to_unfocus @list.focused_item
-    = link_to_complete @list.focused_item
+.dashboard
+  .new-item-form.center
+    = render partial: 'items/form'
 
-= render partial: 'items/form'
+  - if @list.focused_item.present?
+    .current-focus.center
+      = link_to_unfocus @list.focused_item
+      = @list.focused_item.name
+      = link_to_complete @list.focused_item
 
-= render partial: 'lists/active_items'
+  = render partial: 'lists/active_items'
 
-- if @list.items.completed.any?
-  = render partial: 'lists/recently_completed_items'
+  - if @list.items.completed.any?
+    = render partial: 'lists/recently_completed_items'

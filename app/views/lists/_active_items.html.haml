@@ -1,2 +1,3 @@
-%ul
-  = render @list.items.incomplete.unfocused.order_by_last_focused
+.items-list
+  %ul
+    = render @list.items.incomplete.unfocused.order_by_last_focused

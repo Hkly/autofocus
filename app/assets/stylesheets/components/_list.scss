@@ -1,0 +1,17 @@
+.items-list {
+  display: flex;
+  justify-content: center;
+
+  li {
+    margin-bottom: 12px;
+    line-height: 12px;
+
+    div {
+      display: inline-block;
+    }
+  }
+
+  .item-actions {
+    width: 90px;
+  }
+}

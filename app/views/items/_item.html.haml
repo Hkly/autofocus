@@ -1,6 +1,9 @@
 %li
-  = item.name
   - unless item.completed?
-    = link_to_focus item
-    = link_to_complete item
-    = link_to_delete item
+    .item-actions
+      = link_to_focus item
+      = link_to_complete item
+      = link_to_delete item
+      
+  .item-name
+    = item.name
