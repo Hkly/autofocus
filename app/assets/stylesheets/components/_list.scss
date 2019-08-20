@@ -3,7 +3,13 @@
   justify-content: center;
   cursor: default;
 
+  ul {
+    max-width: 600px;
+  }
+
   li {
+    display: flex;
+    align-items: center;
     padding: 7px 5px;
     margin-bottom: 5px;
     line-height: 15px;
@@ -14,10 +20,6 @@
 }
 
 .to-do-item {
-  .item-name {
-    display: inline-block;
-  }
-
   &:hover {
     .item-actions {
       opacity: 1;
@@ -26,7 +28,7 @@
 }
 
 .item-actions {
-  display: inline-block;
+  min-width: 92px;
   opacity: 0;
   transition: opacity 0.3s ease;
   a {
