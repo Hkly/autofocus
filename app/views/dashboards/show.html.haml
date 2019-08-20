@@ -4,8 +4,9 @@
 
   - if @list.focused_item.present?
     .current-focus.to-do-item.center
-      .item-actions= link_to_complete @list.focused_item
-      = link_to_unfocus @list.focused_item
+      .item-actions
+        = link_to_complete @list.focused_item
+        = link_to_unfocus @list.focused_item
       = @list.focused_item.name
 
   = render partial: 'lists/active_items'

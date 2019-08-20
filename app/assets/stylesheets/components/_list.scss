@@ -21,17 +21,18 @@
 
 .to-do-item {
   &:hover {
-    .item-actions {
+    .item-actions a {
       opacity: 1;
     }
   }
 }
 
 .item-actions {
+  display: inline-block;
   min-width: 92px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
   a {
+    opacity: 0;
+    transition: opacity 0.3s ease;
     padding: 1px 5px;
   }
 }
@@ -41,8 +42,8 @@
   margin: 35px auto;
 }
 
-.focused-star {
-  transition: color 0.4s ease;
+a.focused-star {
+  opacity: 1;
   color: $yellow;
   &:hover {
     color: $teal;
@@ -52,8 +53,7 @@
   }
 }
 
-.unfocused-star {
-  transition: color 0.4s ease;
+a.unfocused-star {
   &:hover {
     color: $yellow;
     .fa-star:before {
