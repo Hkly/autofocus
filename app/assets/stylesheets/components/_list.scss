@@ -1,17 +1,61 @@
 .items-list {
   display: flex;
   justify-content: center;
+  cursor: default;
 
   li {
-    margin-bottom: 12px;
-    line-height: 12px;
-
-    div {
-      display: inline-block;
+    padding: 7px 5px;
+    margin-bottom: 5px;
+    line-height: 15px;
+    &:hover {
+      background-color: transparentize($teal, 0.9);
     }
   }
+}
 
-  .item-actions {
-    width: 90px;
+.to-do-item {
+  .item-name {
+    display: inline-block;
+  }
+
+  &:hover {
+    .item-actions {
+      opacity: 1;
+    }
+  }
+}
+
+.item-actions {
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  a {
+    padding: 1px 5px;
+  }
+}
+
+.current-focus {
+  font-size: 30px;
+  margin: 35px auto;
+}
+
+.focused-star {
+  transition: color 0.4s ease;
+  color: $yellow;
+  &:hover {
+    color: $teal;
+    .fa-star:before {
+      font-weight: 100;
+    }
+  }
+}
+
+.unfocused-star {
+  transition: color 0.4s ease;
+  &:hover {
+    color: $yellow;
+    .fa-star:before {
+      font-weight: 600;
+    }
   }
 }

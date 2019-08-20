@@ -1,10 +1,7 @@
-@mixin icon-btn {
+@mixin action-link {
   color: $teal;
-  padding: 0 5px;
-  border-radius: 5px;
   &:hover {
-    color: white;
-    background: $teal;
+    color: darken($teal, 25%);
     cursor: pointer;
   }
 }

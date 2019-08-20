@@ -17,13 +17,8 @@
   }
 
   button {
-    @include icon-btn;
+    @include action-link;
     border: none;
     font-size: 30px;
   }
-}
-
-.current-focus {
-  font-size: 30px;
-  margin: 35px auto;
 }
