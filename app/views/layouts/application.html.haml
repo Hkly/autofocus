@@ -10,8 +10,8 @@
   %body
     = render partial: "layouts/top_nav"
 
-    %p.notice= notice
-    %p.alert= alert
+    .fix-width-container
+      %p.notice= notice
+      %p.alert= alert
 
-    .main-container
       = yield

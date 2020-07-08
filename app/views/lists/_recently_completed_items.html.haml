@@ -1,7 +1,8 @@
-%h3.center
-  = "Total Completed: #{@list.items.completed.count}"
+.completed-list
+  %h3.center
+    = "Total Completed: #{@list.items.completed.count}"
 
-%h3.center Recently Completed Items
-.items-list.greyed-out
-  %ul
-    = render @list.items.recently_completed
+  %h3.center Recently Completed Items
+  .items-list.greyed-out
+    %ul
+      = render @list.items.recently_completed

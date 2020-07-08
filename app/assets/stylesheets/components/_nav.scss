@@ -2,6 +2,12 @@
   display: flex;
   justify-content: space-between;
   padding: 0 10%;
+  background-color: $teal;
+  height: 45px;
+  line-height: 45px;
+  a {
+    color: white;
+  }
   .title {
     font-size: 22px;
   }

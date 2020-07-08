@@ -1,10 +1,12 @@
 .items-list {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   cursor: default;
+  width: 500px;
+  margin: auto;
 
   ul {
-    max-width: 600px;
+    width: 100%;
   }
 
   li {
@@ -29,7 +31,7 @@
 
 .item-actions {
   display: inline-block;
-  min-width: 92px;
+  min-width: 100px;
   a {
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -39,7 +41,10 @@
 
 .current-focus {
   font-size: 30px;
+  width: 600px;
   margin: 35px auto;
+  display: flex;
+  align-items: center;
 }
 
 a.focused-star {
@@ -59,5 +64,11 @@ a.unfocused-star {
     .fa-star:before {
       font-weight: 600;
     }
+  }
+}
+
+.completed-list {
+  h3 {
+    margin-top: 25px;
   }
 }

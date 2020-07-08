@@ -1,14 +1,18 @@
 .dashboard
-  .new-item-form.center
-    = render partial: 'items/form'
-
   - if @list.focused_item.present?
-    .current-focus.to-do-item.center
+    .current-focus.to-do-item
       .item-actions
         = link_to_complete @list.focused_item
         = link_to_unfocus @list.focused_item
-      = @list.focused_item.name
+      .item-name
+        = @list.focused_item.name
 
+  .new-item-form.center
+    = render partial: 'items/form'
+
+  - if @list.items.incomplete.empty?
+    .no-items
+      You have no items on your list!
   = render partial: 'lists/active_items'
 
   - if @list.items.completed.any?

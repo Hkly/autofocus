@@ -1,5 +1,6 @@
 @mixin action-link {
   color: $teal;
+  background: none;
   &:hover {
     color: darken($teal, 25%);
     cursor: pointer;
